@@ -12,6 +12,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   background-color: var(--gulf-blue) !important;
 }
 
@@ -66,9 +67,118 @@ p {
   font-family: 'Inter', sans-serif;
 }
 
-header {
-  background-color: transparent;
+#head {
+  margin: 2em 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+#head h3 a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+/* Hamburger Menu */
+#menu-toggle, #menu-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0;
+  color: var(--dark-color);
+}
+
+.logo-holder {
+  display: flex;
+  align-items:center;
+  text-decoration: none;
+  color: var(--body-color);
+  font-weight: bold;
+}
+
+#menu-toggle:hover, #menu-close:hover {
+  color: var(--link-color);
+}
+
+#slide-in-menu {
+  position: absolute;
+  background-color: #ff8c00;
+  top: 0;
+  right: -300px; /* Start off-screen */
+  width: 300px;
+  height: 100vh;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  padding: 1em;
+  transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#slide-in-menu.open {
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+#slide-in-menu #menu-close {
+  align-self: flex-end;
+  margin-bottom: 1em;
+}
+
+#slide-in-menu a {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.75em 0;
+  border-bottom: 1px solid var(--light-color);
+}
+
+#slide-in-menu a:hover {
+  background-color: var(--light-color);
+}
+
+#slide-in-menu a:last-of-type {
+  border-bottom: none;
+}
+
+
+.circle-container {
+  position: relative;
+      width: 300px; /* Size of your circle */
+      height: 300px;
+      border-radius: 50%; /* Makes it a circle */
+      margin: 50px auto; /* Centers the circle */
+      /* Optional: Add a background to see the circle */
+      /* background: #eee; */
+}
+
+.link-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0; /* Rotate around the container's center */
+  transform: rotate(var(--angle)) translate(120px) rotate(calc(-1 * var(--angle)));
+  /* 120px is approx half the container size for positioning */
+  text-decoration: none;
+  color: blue;
+  padding: 5px;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+}
+
+/* Adjust for link size (e.g., make it look centered) */
+.link-item {
+    /* Adjust translate for item size */
+    transform: rotate(var(--angle)) translate(120px) rotate(calc(-1 * var(--angle))) translateX(-50%) translateY(-50%);
+}
+
 
 .banner {
   background-color: transparent;
@@ -87,8 +197,9 @@ header {
 }
 
 main {
-  background-color: transparent;
-  width: 100%;
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 section {

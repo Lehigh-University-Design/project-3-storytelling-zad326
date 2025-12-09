@@ -7,17 +7,44 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header>
-    <div class="banner">
-      <img src="images/p3 images/spark.png" alt="Spark plug logo" class="logo" />
-      <h1 class="title">Ignition Point</h1>
-    </div>
-  </header>
   <main>
+  <header id="head">
+            <div>
+                    <a href="index.html" class="logo-holder">
+                        <img id="logo" src="./images/p3 images/sparkplug.svg">
+                        <h3 id="logo-type">Ignition Point</h3>
+                    </a>
+            </div>
+            <button id="menu-toggle" aria-label="Open navigation menu">
+                &#9776; <!-- Hamburger Icon -->
+            </button>
+        </header>
+
+        <nav id="slide-in-menu">
+            <button id="menu-close" aria-label="Close navigation menu">&times;</button>
+            <a style="--i: 1"; href="#larson">Larson Boat</a>
+            <a style="--i: 2"; href="#studebaker">Studebaker</a>
+            <a style="--i: 3"; href="#model_a">Model A</a>
+            <a style="--i: 4"; href="#audi">Audi A4</a>
+            <a style="--i: 5"; href="#volkswagon">Volkswagons</a>
+            <a style="--i: 6"; href="#gti">GTI</a>
+        </nav>
+
+
+  
     <section class="hero">
-      <h2>Welcome to Engines That Made Me</h2>
+      <div class="circle-container">
+      <a href="#larson" class="link-item" style="--angle: 0deg;">Larson Boat</a>
+      <a href="#studebaker" class="link-item" style="--angle: 60deg;">Studebaker</a>
+      <a href="#model_a" class="link-item" style="--angle: 120deg;">Model A</a>
+      <a href="#audi" class="link-item" style="--angle: 180deg;">Audi A4</a>
+      <a href="#volkswagons" class="link-item" style="--angle: 240deg;">Volkswagons</a>
+      <a href="#gti" class="link-item" style="--angle: 300deg;">GTI</a>
+</div>
     </section>
-    <section class="larson-story">
+
+
+    <section id="larson" class="larson-story">
       <h2><strong>My Grandma's 2000 Larson SEi 206</strong></h2>
       <div class="text-content">
         <p>My grandma’s 2000 Larson SEi 206 was the first machine that ever scared me. Its deep rumble, the way it rocked in the water, and the raw pull of the engine used to make my heart race when I was a kid. But somewhere along the line, that fear turned into infatuation. I found myself staring at the stern, trying to understand how the propeller transformed all that noise and power into smooth, endless motion across the lake. Before long, I wanted to drive it myself, to feel that connection between throttle and water. Every summer, the boat became a little less intimidating and a little more fascinating. Around that same time, I discovered slalom skiing — gliding behind the very boat that had once scared me. The rush, the spray, the hum of the engine — it all blended into one feeling I’ve been chasing ever since. That Larson was more than a family boat; it was the spark that ignited my love for watersports and my fascination with how machines move us.</p>
@@ -31,7 +58,7 @@
         </div>
       </div>
     </section>
-    <section class="audi-story">
+    <section id="audi" class="audi-story">
       <h2><strong>My Dad's 2004 Audi A4</strong></h2>
       <div class="text-content">
         <p>My dad’s 2004 Audi A4 was the car that made me fall in love with driving. It was a blue manual with a gray interior, understated yet full of character — a car that always seemed to smell the same and make the same comforting mechanical sounds. I remember being thirteen, only seeing my dad a few times a week, and looking forward to those evenings in the parking lot where we’d practice driving stick. The clutch, the revs, the smooth slide into second gear — every bit of it felt magical. He’d grin when I got it right, and I could tell he enjoyed it as much as I did. That car carried more than us; it carried the moments that shaped my understanding of driving as something human, connected, and alive. When it bottomed out and the engine seized on a Manhattan pothole in 2019, it felt like losing a piece of our shared history. But that Audi is why I drive a manual today — and why I’ll always love it.</p>
@@ -46,7 +73,7 @@
       </div>
     </section>
     
-    <section class="model-a-story">
+    <section id="model_a" class="model-a-story">
       <h2>My Grandpa's 1931 Ford Model A</h2>
       <p>My grandpa’s 1931 Ford Model A smelled like another era — a mix of oil, metal, and history. It was green with cream wheels, a gray interior, and a charm that no modern car could ever replicate. Every visit to Boca Raton, I’d ask if we could take it out for dinner, and every time he’d smile and toss me the keys. The sound of that old engine — mechanical, honest, alive — filled the warm Florida evenings as we cruised along the quiet streets. That car wasn’t just transportation; it was a time machine, one that connected me to my grandpa in a way nothing else could. It made me realize that cars aren’t just objects — they’re extensions of the people who love them.</p>
       <div class="image-container">
@@ -55,7 +82,7 @@
       </div>
     </section>
     
-    <section class="studebaker-story">
+    <section id="studebaker" class="studebaker-story">
       <h2>My Grandpas's 1951 Studebaker</h2>
       <p>My Grandpas’s 1951 Studebaker was a car that stood out in every way. Its suicide doors, the unique front grille, and the way it seemed to glide down the road made it unforgettable. I remember sitting in the passenger seat, marveling at the simplicity and elegance of its design. The Studebaker wasn’t just a car; it was a statement, a piece of art on wheels. Every ride in it felt like stepping back in time, to an era where cars had soul and character. It taught me to appreciate the beauty in design and the stories that old machines carry with them.</p>
       <div class="image-container">
@@ -63,7 +90,7 @@
         <img src="images/p3 images/studfrontquarter.png" alt="Front quarter view of the Studebaker">
       </div>
     </section>
-    <section class="volkswagen-story">
+    <section id="volkswagons" class="volkswagen-story">
       <h2><strong>My Drum Teacher's Volkswagens</strong></h2>
       <div class="text-content">
         <p>My drum teacher, Bryan Carter, was the first person outside my family who shared that same passion for machines. He was my favorite teacher — patient, cool, and full of energy — but it was his cars that fascinated me. He had a black 2004 R32 that sang through its VR6 like nothing else I’d heard. Every time he pulled up, I’d stop what I was doing just to listen. He also had a yellow Corrado — quirky, rare, and pure Volkswagen soul. Those cars, and the way he talked about them, showed me that cars could be art — expressions of personality and engineering passion rolled into one. Without even meaning to, he planted the seed that would grow into my obsession with German cars.</p>
@@ -77,7 +104,7 @@
         </div>
       </div>
     </section>
-    <section class="golf-gti-story">
+    <section id="gti" class="golf-gti-story">
       <h2><strong>My 2016 Golf GTI</strong></h2>
       <div class="text-content">
         <p>By the time I got my 2016 Golf GTI in 2020, it felt like everything had come full circle. It was manual, of course, and from the moment I sat in it, I knew it was more than just transportation — it was an extension of everything I loved. Over the years, I’ve modified it piece by piece: intake, intercooler, exhaust, suspension — making it faster, sharper, and more mine. This GTI is the modern echo of all those memories, refined and reimagined.</p>
@@ -93,5 +120,7 @@
   </main>
   <script src="script.js"></script>
 </body>
+
+<script src="./js/main.js"></script>
 
 </html>
