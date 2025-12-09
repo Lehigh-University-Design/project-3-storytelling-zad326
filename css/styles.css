@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 :root {
     --gulf-blue: #0066cc;
 }
@@ -14,30 +17,53 @@ html {
 
 body {
   background-color: var(--gulf-blue) !important;
-  color: rgb(12, 162, 185);
+  color: #000;
   min-height: 100vh;
   margin: 0;
   padding: 0;
 }
 
 a, .nav-button {
-  color: rgb(217, 7, 7);
+  color: #000;
 }
 
 img {
   filter: brightness(1); 
   opacity: 0.9;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  letter-spacing: 2px;
+  font-family: 'Lato', sans-serif;
+}
 
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin: 20px 0;
+  font-family: 'Lato', sans-serif;
 }
 
 p {
-  border: 2px solid #333; 
+  border: 2px solid #ff8c00; 
   padding: 10px; 
   margin: 10px; 
-  border-radius: 5px; 
+  border-radius: 5px;
+  background-color: #ff8c00;
+  color: #000;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
 }
 
 header {
@@ -46,6 +72,18 @@ header {
 
 .banner {
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  max-width: 100%;
+  height: auto;
 }
 
 main {
@@ -58,8 +96,12 @@ section {
   background-image: none !important;
 }
 
-.hero {
+hero {
   background-color: transparent;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
 }
 
 .landing {
@@ -77,6 +119,7 @@ section {
 
 .larson-story {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -84,21 +127,100 @@ section {
   padding: 30px 20px;
 }
 
+.larson-story p {
+  font-size: 1.2rem;
+}
+
+.larson-story .text-content {
+  width: 100%;
+  text-align: center;
+}
+
+.larson-story .grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.larson-story .grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .larson-story .grid-item img {
-  max-width: 100%;
+  max-width: 600px;
   height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .larson-story .grid-container .grid-item img {
   width: 100%; 
-  max-width: 300px; 
+  max-width: 600px; 
   height: auto; 
-  margin: 0 auto; 
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .audi-story {
   background-color: transparent;
   padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.audi-story p {
+  font-size: 1.2rem;
+}
+
+.audi-story .text-content {
+  width: 100%;
+  text-align: center;
+}
+
+.audi-story .grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.audi-story .grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audi-story .grid-item img {
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.audi-story .grid-container .grid-item img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .model-a-story {
@@ -108,13 +230,13 @@ section {
 }
 
 .model-a-story h2 {
-  font-size: 2rem;
-  color: #fff;
+  font-size: 2.5rem;
+  color: #000;
 }
 
 .model-a-story p {
   font-size: 1.2rem;
-  color: #fff;
+  color: #000;
   line-height: 1.6;
   margin: 20px 0;
 }
@@ -122,16 +244,19 @@ section {
 .model-a-story .image-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   margin-top: 30px;
 }
 
 .model-a-story .image-container img {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
 }
 
 .studebaker-story {
@@ -141,13 +266,13 @@ section {
 }
 
 .studebaker-story h2 {
-  font-size: 2rem;
-  color: #fff;
+  font-size: 2.5rem;
+  color: #000;
 }
 
 .studebaker-story p {
   font-size: 1.2rem;
-  color: #fff;
+  color: #000;
   line-height: 1.6;
   margin: 20px 0;
 }
@@ -155,26 +280,111 @@ section {
 .studebaker-story .image-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   margin-top: 30px;
 }
 
 .studebaker-story .image-container img {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
 }
 
 .volkswagen-story {
   background-color: transparent;
   padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.volkswagen-story p {
+  font-size: 1.2rem;
+}
+
+.volkswagen-story .text-content {
+  width: 100%;
+  text-align: center;
+}
+
+.volkswagen-story .grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.volkswagen-story .grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.volkswagen-story .grid-item img {
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.volkswagen-story .grid-container .grid-item img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .golf-gti-story {
   background-color: transparent;
   padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.golf-gti-story p {
+  font-size: 1.2rem;
+}
+
+.golf-gti-story .text-content {
+  width: 100%;
+  text-align: center;
+}
+
+.golf-gti-story .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.golf-gti-story .image-container img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
 }
 
 .final-statement {
